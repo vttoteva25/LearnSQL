@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Course.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Exercise.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\MaterialExercise.cs" />
+    <Compile Include="Models\StaticModels.cs" />
+    <Compile Include="Models\Stage.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="PopUpForm.cs">
       <SubType>Form</SubType>
     </Compile>

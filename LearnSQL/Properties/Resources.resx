@@ -124,10 +124,5 @@
   <data name="learnSQL_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\learnSQL_Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button prev" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\button prev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\button next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+
 </root>

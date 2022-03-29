@@ -63,26 +63,6 @@ namespace LearnSQL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_next {
-            get {
-                object obj = ResourceManager.GetObject("button next", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button_prev {
-            get {
-                object obj = ResourceManager.GetObject("button prev", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap learnSQL_Background {
             get {
                 object obj = ResourceManager.GetObject("learnSQL_Background", resourceCulture);
