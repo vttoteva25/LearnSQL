@@ -46,33 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course.cs">
+    <Compile Include="Views\Course.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Course.Designer.cs">
+    <Compile Include="Views\Course.Designer.cs">
       <DependentUpon>Course.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Views\PopUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopUpForm.Designer.cs">
+    <Compile Include="Views\PopUpForm.Designer.cs">
       <DependentUpon>PopUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Course.resx">
+    <Compile Include="Views\IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\IntroForm.Designer.cs">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Course.resx">
       <DependentUpon>Course.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopUpForm.resx">
+    <EmbeddedResource Include="Views\PopUpForm.resx">
       <DependentUpon>PopUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -85,6 +88,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,17 +107,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\learnSQL_Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\learnSQL_Background1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\button prev.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\button next.png" />
+    <None Include="Images\Background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
