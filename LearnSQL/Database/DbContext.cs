@@ -7,7 +7,7 @@ namespace LearnSQL.Database
 	static class DbContext
 	{
 		private static SqlConnection connection;
-		private static string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=CompanyDatabase;Integrated Security=True";
+		private static string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=LearnSQL;Integrated Security=True";
 
 		public static List<User> Users { get; set; }
 		public static List<Stage> Stages { get; set; }
@@ -99,7 +99,7 @@ namespace LearnSQL.Database
 			Exercises = new List<Exercise>();
 
 			connection = new SqlConnection(connectionString);
-			string query = "SELECT * FROM Exercises";
+			string query = "SELECT * FROM Excercise";
 
 			using (connection)
 			{
@@ -122,7 +122,7 @@ namespace LearnSQL.Database
 			MaterialsExercises = new List<MaterialExercise>();
 
 			connection = new SqlConnection(connectionString);
-			string query = "SELECT * FROM MaterialsExercises";
+			string query = "SELECT * FROM MaterialsExcercise";
 
 			using (connection)
 			{
