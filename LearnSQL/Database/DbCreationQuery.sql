@@ -24,15 +24,15 @@ CREATE TABLE Materials
 	StageID INT REFERENCES Stages(Stage)
 );
 
-CREATE TABLE Excercise
+CREATE TABLE Excercises
 (
 	ID INT PRIMARY KEY,
 	Problem NVARCHAR(MAX) NOT NULL,
 	Solution NVARCHAR(MAX) NOT NULL
 );
 
-CREATE TABLE MaterialsExcercise
+CREATE TABLE MaterialsExcercises
 (
 	MaterialID INT FOREIGN KEY REFERENCES Materials(ID),
-	ExcerciseID INT FOREIGN KEY REFERENCES Excercise(ID)
+	ExcerciseID INT FOREIGN KEY REFERENCES Excercises(ID)
 );

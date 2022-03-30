@@ -11,7 +11,7 @@ namespace LearnSQL.Views
 		public MainForm()
 		{
 			InitializeComponent();
-			DbContext.FillTheDb();
+			DbContext.FillTheDatabase();
 
 			main = new Panel();
 			main.Location = new Point(0, 0);

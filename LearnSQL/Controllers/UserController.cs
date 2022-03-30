@@ -13,27 +13,27 @@ namespace LearnSQL.Controllers
     public static class UserController
     {
         public static User LoggedUser { get; set; }
-        public static void RegisterUser(string username, string password, string FirstName, string SurnName)
+        public static void RegisterUser(string username, string password, string firstName, string surname)
         {
-            DbContext.Users.Add(new User(username, FirstName, SurnName, password, 1));
-
+            DbContext.Users.Add(new User(username, firstName, surname, password, 1));
+            DbContext.WriteInDatabase($"INSERT INTO Users (Username, Name, Surname, Password, Stage) VALUES ('{username}', '{firstName}', '{surname}', '{password}', 1)");
         }
         public static void LoginUser(string username,string password)
         {
-            if(DbContext.Users.Any(x=>x.UserName==username))
+            if(DbContext.Users.Any(x=>x.Username==username))
             {
-                if (DbContext.Users.Find(x => x.UserName == username).Password == password)
+                if (DbContext.Users.Find(x => x.Username == username).Password == password)
                 {
-                    LoggedUser = DbContext.Users.Find(x => x.UserName == username);
+                    LoggedUser = DbContext.Users.Find(x => x.Username == username);
                 }
                 else
                 { 
-                    MessageBox.Show("Incorrect Username or Password", "Error"); 
+                    MessageBox.Show("Грешно име или парола!", "Грешка"); 
                 }
             }
             else
             {
-                MessageBox.Show("Incorrect Username or Password", "Error");
+                MessageBox.Show("Грешно име или парола!", "Грешка");
             }
         }
     }

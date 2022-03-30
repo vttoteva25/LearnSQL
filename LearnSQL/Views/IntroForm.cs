@@ -51,8 +51,35 @@ namespace LearnSQL.Views
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-			UserController.RegisterUser(RegisterUsernameTextBox.Text, RegisterPasswordTextBox.Text, RegisterFirstNameTextBox.Text, RegisterLastNameTextBox.Text);
-			DesignController.OpenForm(new Course());
+			if(RegisterConfirmPasswordTextBox.Text==RegisterPasswordTextBox.Text)
+            {
+				if(RegisterPasswordTextBox.Text.Length<6||RegisterPasswordTextBox.Text.Length >30 )
+                {
+					MessageBox.Show("Паролата трябва да е между 6 и 30 симовола!","Грешка");
+                }
+				else
+                {
+					UserController.RegisterUser(RegisterUsernameTextBox.Text, RegisterPasswordTextBox.Text, RegisterFirstNameTextBox.Text, RegisterLastNameTextBox.Text);
+					if(DialogResult.OK==MessageBox.Show("Вие успешно се регистрирахте!","Поздравелния",MessageBoxButtons.OK))
+                    {
+						DesignController.OpenForm(new Course());
+					}
+				}
+			}
+			else
+            {
+				MessageBox.Show("Полетата за парола не свъпадат!", "Грешка");
+			}
+			
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+			UserController.LoginUser(LoginUsernameTextBox.Text, LoginPasswordTextBox.Text);
+			if(!(UserController.LoggedUser is null))
+			{
+				DesignController.OpenForm(new Course());
+			}
         }
     }
 }
