@@ -99,7 +99,7 @@ namespace LearnSQL.Database
 			Exercises = new List<Exercise>();
 
 			connection = new SqlConnection(connectionString);
-			string query = "SELECT * FROM Excercise";
+			string query = "SELECT * FROM Excercises";
 
 			using (connection)
 			{
@@ -122,7 +122,7 @@ namespace LearnSQL.Database
 			MaterialsExercises = new List<MaterialExercise>();
 
 			connection = new SqlConnection(connectionString);
-			string query = "SELECT * FROM MaterialsExcercise";
+			string query = "SELECT * FROM MaterialsExcercises";
 
 			using (connection)
 			{
