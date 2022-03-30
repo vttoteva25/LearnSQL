@@ -15,7 +15,7 @@ namespace LearnSQL.Database
 		public static List<Exercise> Exercises { get; set; }
 		public static List<MaterialExercise> MaterialsExercises { get; set; }
 
-		public static void FillTheDb()
+		public static void FillTheDatabase()
 		{
 			FillUsers();
 			FillStages();
@@ -23,6 +23,19 @@ namespace LearnSQL.Database
 			FillExercises();
 			FillMaterialsExercises();
 			
+		}
+
+		public static void WriteInDatabase(string query)
+		{
+			connection = new SqlConnection(connectionString);
+
+			using (connection)
+			{
+				SqlCommand command = new SqlCommand(query, connection);
+				connection.Open();
+
+				command.ExecuteNonQuery();
+			}
 		}
 
 		private static void FillUsers()
