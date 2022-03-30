@@ -64,5 +64,5 @@ namespace LearnSQL
         {
             form.Show();
         }
-    }
+	}
 }
