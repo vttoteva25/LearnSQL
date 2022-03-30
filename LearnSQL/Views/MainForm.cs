@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using LearnSQL.Database;
 
 namespace LearnSQL.Views
 {
@@ -10,6 +11,7 @@ namespace LearnSQL.Views
 		public MainForm()
 		{
 			InitializeComponent();
+			DbContext.FillTheDb();
 
 			main = new Panel();
 			main.Location = new Point(0, 0);

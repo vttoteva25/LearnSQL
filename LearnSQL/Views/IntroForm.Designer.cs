@@ -29,400 +29,417 @@ namespace LearnSQL.Views
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntroForm));
-			this.LoginPanel = new System.Windows.Forms.Panel();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label10 = new System.Windows.Forms.Label();
-			this.LoginButton = new System.Windows.Forms.Button();
-			this.OpenRegisterPanelLabel = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
-			this.LoginPasswordTextBox = new System.Windows.Forms.TextBox();
-			this.LoginUsernameTextBox = new System.Windows.Forms.TextBox();
-			this.RegisterPanel = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.RegisterButton = new System.Windows.Forms.Button();
-			this.OpenLoginPanelLabel = new System.Windows.Forms.Label();
-			this.RegisterConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
-			this.RegisterPasswordTextBox = new System.Windows.Forms.TextBox();
-			this.RegisterLastNameTextBox = new System.Windows.Forms.TextBox();
-			this.RegisterFirstNameTextBox = new System.Windows.Forms.TextBox();
-			this.RegisterUsernameTextBox = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.MainPanel = new System.Windows.Forms.Panel();
-			this.OpenLoginPanelButton = new System.Windows.Forms.Button();
-			this.OpenRegisterPanelButton = new System.Windows.Forms.Button();
-			this.label13 = new System.Windows.Forms.Label();
-			this.LoginPanel.SuspendLayout();
-			this.panel1.SuspendLayout();
-			this.RegisterPanel.SuspendLayout();
-			this.panel2.SuspendLayout();
-			this.MainPanel.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// LoginPanel
-			// 
-			this.LoginPanel.BackgroundImage = global::LearnSQL.Properties.Resources.Background;
-			this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.LoginPanel.Controls.Add(this.panel1);
-			this.LoginPanel.Location = new System.Drawing.Point(15, 390);
-			this.LoginPanel.Name = "LoginPanel";
-			this.LoginPanel.Size = new System.Drawing.Size(129, 78);
-			this.LoginPanel.TabIndex = 5;
-			this.LoginPanel.Visible = false;
-			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.Color.Ivory;
-			this.panel1.Controls.Add(this.label10);
-			this.panel1.Controls.Add(this.LoginButton);
-			this.panel1.Controls.Add(this.OpenRegisterPanelLabel);
-			this.panel1.Controls.Add(this.label2);
-			this.panel1.Controls.Add(this.label3);
-			this.panel1.Controls.Add(this.label12);
-			this.panel1.Controls.Add(this.LoginPasswordTextBox);
-			this.panel1.Controls.Add(this.LoginUsernameTextBox);
-			this.panel1.Location = new System.Drawing.Point(647, 64);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(399, 495);
-			this.panel1.TabIndex = 8;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.BackColor = System.Drawing.Color.Transparent;
-			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label10.Location = new System.Drawing.Point(163, 51);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(92, 37);
-			this.label10.TabIndex = 8;
-			this.label10.Text = "Вход";
-			// 
-			// LoginButton
-			// 
-			this.LoginButton.BackColor = System.Drawing.Color.MediumSeaGreen;
-			this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.LoginButton.ForeColor = System.Drawing.SystemColors.Info;
-			this.LoginButton.Location = new System.Drawing.Point(133, 331);
-			this.LoginButton.Name = "LoginButton";
-			this.LoginButton.Size = new System.Drawing.Size(146, 61);
-			this.LoginButton.TabIndex = 7;
-			this.LoginButton.Text = "Вход";
-			this.LoginButton.UseVisualStyleBackColor = false;
-			// 
-			// OpenRegisterPanelLabel
-			// 
-			this.OpenRegisterPanelLabel.AutoSize = true;
-			this.OpenRegisterPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.OpenRegisterPanelLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.OpenRegisterPanelLabel.Location = new System.Drawing.Point(289, 425);
-			this.OpenRegisterPanelLabel.Name = "OpenRegisterPanelLabel";
-			this.OpenRegisterPanelLabel.Size = new System.Drawing.Size(51, 20);
-			this.OpenRegisterPanelLabel.TabIndex = 6;
-			this.OpenRegisterPanelLabel.Text = "оттук";
-			this.OpenRegisterPanelLabel.Click += new System.EventHandler(this.OpenRegisterPanelLabel_Click);
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label2.Location = new System.Drawing.Point(83, 226);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(67, 20);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Парола";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(44, 425);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(253, 20);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "Нямаш акаунт? Регистрирай се ";
-			// 
-			// label12
-			// 
-			this.label12.AutoSize = true;
-			this.label12.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label12.Location = new System.Drawing.Point(80, 137);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(161, 20);
-			this.label12.TabIndex = 3;
-			this.label12.Text = "Потребителско име";
-			// 
-			// LoginPasswordTextBox
-			// 
-			this.LoginPasswordTextBox.Location = new System.Drawing.Point(87, 258);
-			this.LoginPasswordTextBox.Name = "LoginPasswordTextBox";
-			this.LoginPasswordTextBox.Size = new System.Drawing.Size(247, 26);
-			this.LoginPasswordTextBox.TabIndex = 2;
-			// 
-			// LoginUsernameTextBox
-			// 
-			this.LoginUsernameTextBox.Location = new System.Drawing.Point(87, 160);
-			this.LoginUsernameTextBox.Name = "LoginUsernameTextBox";
-			this.LoginUsernameTextBox.Size = new System.Drawing.Size(247, 26);
-			this.LoginUsernameTextBox.TabIndex = 1;
-			// 
-			// RegisterPanel
-			// 
-			this.RegisterPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegisterPanel.BackgroundImage")));
-			this.RegisterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.RegisterPanel.Controls.Add(this.panel2);
-			this.RegisterPanel.Controls.Add(this.label9);
-			this.RegisterPanel.Location = new System.Drawing.Point(11, 12);
-			this.RegisterPanel.Name = "RegisterPanel";
-			this.RegisterPanel.Size = new System.Drawing.Size(347, 126);
-			this.RegisterPanel.TabIndex = 4;
-			this.RegisterPanel.Visible = false;
-			// 
-			// panel2
-			// 
-			this.panel2.BackColor = System.Drawing.Color.Ivory;
-			this.panel2.Controls.Add(this.label1);
-			this.panel2.Controls.Add(this.label11);
-			this.panel2.Controls.Add(this.RegisterButton);
-			this.panel2.Controls.Add(this.OpenLoginPanelLabel);
-			this.panel2.Controls.Add(this.RegisterConfirmPasswordTextBox);
-			this.panel2.Controls.Add(this.RegisterPasswordTextBox);
-			this.panel2.Controls.Add(this.RegisterLastNameTextBox);
-			this.panel2.Controls.Add(this.RegisterFirstNameTextBox);
-			this.panel2.Controls.Add(this.RegisterUsernameTextBox);
-			this.panel2.Controls.Add(this.label8);
-			this.panel2.Controls.Add(this.label7);
-			this.panel2.Controls.Add(this.label6);
-			this.panel2.Controls.Add(this.label5);
-			this.panel2.Controls.Add(this.label4);
-			this.panel2.Location = new System.Drawing.Point(635, 11);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(427, 607);
-			this.panel2.TabIndex = 16;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(91, 572);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(199, 20);
-			this.label1.TabIndex = 17;
-			this.label1.Text = "Имаш регистрация. Влез\r\n";
-			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label11.Location = new System.Drawing.Point(110, 46);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(194, 32);
-			this.label11.TabIndex = 16;
-			this.label11.Text = "Регистрация";
-			// 
-			// RegisterButton
-			// 
-			this.RegisterButton.BackColor = System.Drawing.Color.MediumSeaGreen;
-			this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.RegisterButton.ForeColor = System.Drawing.Color.Ivory;
-			this.RegisterButton.Location = new System.Drawing.Point(117, 500);
-			this.RegisterButton.Name = "RegisterButton";
-			this.RegisterButton.Size = new System.Drawing.Size(181, 56);
-			this.RegisterButton.TabIndex = 15;
-			this.RegisterButton.Text = "Регистрация";
-			this.RegisterButton.UseVisualStyleBackColor = false;
-			// 
-			// OpenLoginPanelLabel
-			// 
-			this.OpenLoginPanelLabel.AutoSize = true;
-			this.OpenLoginPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.OpenLoginPanelLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.OpenLoginPanelLabel.Location = new System.Drawing.Point(291, 572);
-			this.OpenLoginPanelLabel.Name = "OpenLoginPanelLabel";
-			this.OpenLoginPanelLabel.Size = new System.Drawing.Size(51, 20);
-			this.OpenLoginPanelLabel.TabIndex = 14;
-			this.OpenLoginPanelLabel.Text = "оттук";
-			this.OpenLoginPanelLabel.Click += new System.EventHandler(this.OpenLoginPanelLabel_Click);
-			// 
-			// RegisterConfirmPasswordTextBox
-			// 
-			this.RegisterConfirmPasswordTextBox.Location = new System.Drawing.Point(83, 443);
-			this.RegisterConfirmPasswordTextBox.Name = "RegisterConfirmPasswordTextBox";
-			this.RegisterConfirmPasswordTextBox.Size = new System.Drawing.Size(261, 26);
-			this.RegisterConfirmPasswordTextBox.TabIndex = 12;
-			// 
-			// RegisterPasswordTextBox
-			// 
-			this.RegisterPasswordTextBox.Location = new System.Drawing.Point(83, 363);
-			this.RegisterPasswordTextBox.Name = "RegisterPasswordTextBox";
-			this.RegisterPasswordTextBox.Size = new System.Drawing.Size(261, 26);
-			this.RegisterPasswordTextBox.TabIndex = 11;
-			// 
-			// RegisterLastNameTextBox
-			// 
-			this.RegisterLastNameTextBox.Location = new System.Drawing.Point(83, 283);
-			this.RegisterLastNameTextBox.Name = "RegisterLastNameTextBox";
-			this.RegisterLastNameTextBox.Size = new System.Drawing.Size(261, 26);
-			this.RegisterLastNameTextBox.TabIndex = 10;
-			// 
-			// RegisterFirstNameTextBox
-			// 
-			this.RegisterFirstNameTextBox.Location = new System.Drawing.Point(83, 203);
-			this.RegisterFirstNameTextBox.Name = "RegisterFirstNameTextBox";
-			this.RegisterFirstNameTextBox.Size = new System.Drawing.Size(261, 26);
-			this.RegisterFirstNameTextBox.TabIndex = 9;
-			// 
-			// RegisterUsernameTextBox
-			// 
-			this.RegisterUsernameTextBox.Location = new System.Drawing.Point(83, 123);
-			this.RegisterUsernameTextBox.Name = "RegisterUsernameTextBox";
-			this.RegisterUsernameTextBox.Size = new System.Drawing.Size(261, 26);
-			this.RegisterUsernameTextBox.TabIndex = 8;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label8.Location = new System.Drawing.Point(79, 415);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(147, 20);
-			this.label8.TabIndex = 7;
-			this.label8.Text = "Потвърди парола";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label7.Location = new System.Drawing.Point(79, 339);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(67, 20);
-			this.label7.TabIndex = 6;
-			this.label7.Text = "Парола";
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label6.Location = new System.Drawing.Point(79, 260);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(81, 20);
-			this.label6.TabIndex = 5;
-			this.label6.Text = "Фамилия";
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label5.Location = new System.Drawing.Point(79, 180);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(40, 20);
-			this.label5.TabIndex = 4;
-			this.label5.Text = "Име";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label4.Location = new System.Drawing.Point(79, 100);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(161, 20);
-			this.label4.TabIndex = 3;
-			this.label4.Text = "Потребителско име";
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(631, 578);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(199, 20);
-			this.label9.TabIndex = 13;
-			this.label9.Text = "Имаш регистрация. Влез\r\n";
-			// 
-			// MainPanel
-			// 
-			this.MainPanel.BackgroundImage = global::LearnSQL.Properties.Resources.Background;
-			this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.MainPanel.Controls.Add(this.label13);
-			this.MainPanel.Controls.Add(this.OpenLoginPanelButton);
-			this.MainPanel.Controls.Add(this.OpenRegisterPanelButton);
-			this.MainPanel.Location = new System.Drawing.Point(11, 184);
-			this.MainPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-			this.MainPanel.Name = "MainPanel";
-			this.MainPanel.Size = new System.Drawing.Size(146, 119);
-			this.MainPanel.TabIndex = 3;
-			// 
-			// OpenLoginPanelButton
-			// 
-			this.OpenLoginPanelButton.BackColor = System.Drawing.Color.MediumSeaGreen;
-			this.OpenLoginPanelButton.FlatAppearance.BorderSize = 2;
-			this.OpenLoginPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.OpenLoginPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.OpenLoginPanelButton.ForeColor = System.Drawing.Color.White;
-			this.OpenLoginPanelButton.Location = new System.Drawing.Point(588, 384);
-			this.OpenLoginPanelButton.Name = "OpenLoginPanelButton";
-			this.OpenLoginPanelButton.Size = new System.Drawing.Size(189, 80);
-			this.OpenLoginPanelButton.TabIndex = 2;
-			this.OpenLoginPanelButton.Text = "Вход";
-			this.OpenLoginPanelButton.UseVisualStyleBackColor = false;
-			this.OpenLoginPanelButton.Click += new System.EventHandler(this.OpenLoginPanelButton_Click);
-			// 
-			// OpenRegisterPanelButton
-			// 
-			this.OpenRegisterPanelButton.BackColor = System.Drawing.Color.MediumSeaGreen;
-			this.OpenRegisterPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.OpenRegisterPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.OpenRegisterPanelButton.ForeColor = System.Drawing.Color.White;
-			this.OpenRegisterPanelButton.Location = new System.Drawing.Point(825, 385);
-			this.OpenRegisterPanelButton.Name = "OpenRegisterPanelButton";
-			this.OpenRegisterPanelButton.Size = new System.Drawing.Size(189, 79);
-			this.OpenRegisterPanelButton.TabIndex = 1;
-			this.OpenRegisterPanelButton.Text = "Регистрация";
-			this.OpenRegisterPanelButton.UseVisualStyleBackColor = false;
-			this.OpenRegisterPanelButton.Click += new System.EventHandler(this.OpenRegisterPanelLabel_Click);
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.BackColor = System.Drawing.Color.Transparent;
-			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label13.ForeColor = System.Drawing.Color.MediumSeaGreen;
-			this.label13.Location = new System.Drawing.Point(577, 274);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(404, 37);
-			this.label13.TabIndex = 3;
-			this.label13.Text = "Добре дошли в LearnSQL";
-			// 
-			// IntroForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1698, 1034);
-			this.Controls.Add(this.LoginPanel);
-			this.Controls.Add(this.RegisterPanel);
-			this.Controls.Add(this.MainPanel);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(1132, 689);
-			this.MinimumSize = new System.Drawing.Size(1132, 689);
-			this.Name = "IntroForm";
-			this.Text = "LoginForm";
-			this.LoginPanel.ResumeLayout(false);
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
-			this.RegisterPanel.ResumeLayout(false);
-			this.RegisterPanel.PerformLayout();
-			this.panel2.ResumeLayout(false);
-			this.panel2.PerformLayout();
-			this.MainPanel.ResumeLayout(false);
-			this.MainPanel.PerformLayout();
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntroForm));
+            this.LoginPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.OpenRegisterPanelLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.LoginPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.LoginUsernameTextBox = new System.Windows.Forms.TextBox();
+            this.RegisterPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.RegisterButton = new System.Windows.Forms.Button();
+            this.OpenLoginPanelLabel = new System.Windows.Forms.Label();
+            this.RegisterConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.RegisterPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.RegisterLastNameTextBox = new System.Windows.Forms.TextBox();
+            this.RegisterFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.RegisterUsernameTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.OpenLoginPanelButton = new System.Windows.Forms.Button();
+            this.OpenRegisterPanelButton = new System.Windows.Forms.Button();
+            this.LoginPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.RegisterPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.MainPanel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // LoginPanel
+            // 
+            this.LoginPanel.BackgroundImage = global::LearnSQL.Properties.Resources.Background;
+            this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginPanel.Controls.Add(this.panel1);
+            this.LoginPanel.Location = new System.Drawing.Point(13, 312);
+            this.LoginPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPanel.Name = "LoginPanel";
+            this.LoginPanel.Size = new System.Drawing.Size(115, 62);
+            this.LoginPanel.TabIndex = 5;
+            this.LoginPanel.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Ivory;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.LoginButton);
+            this.panel1.Controls.Add(this.OpenRegisterPanelLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.LoginPasswordTextBox);
+            this.panel1.Controls.Add(this.LoginUsernameTextBox);
+            this.panel1.Location = new System.Drawing.Point(575, 51);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(355, 396);
+            this.panel1.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(145, 41);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 31);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Вход";
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.Info;
+            this.LoginButton.Location = new System.Drawing.Point(118, 265);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(130, 49);
+            this.LoginButton.TabIndex = 7;
+            this.LoginButton.Text = "Вход";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            // 
+            // OpenRegisterPanelLabel
+            // 
+            this.OpenRegisterPanelLabel.AutoSize = true;
+            this.OpenRegisterPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OpenRegisterPanelLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.OpenRegisterPanelLabel.Location = new System.Drawing.Point(257, 340);
+            this.OpenRegisterPanelLabel.Name = "OpenRegisterPanelLabel";
+            this.OpenRegisterPanelLabel.Size = new System.Drawing.Size(44, 17);
+            this.OpenRegisterPanelLabel.TabIndex = 6;
+            this.OpenRegisterPanelLabel.Text = "оттук";
+            this.OpenRegisterPanelLabel.Click += new System.EventHandler(this.OpenRegisterPanelLabel_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label2.Location = new System.Drawing.Point(74, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Парола";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 340);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(222, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Нямаш акаунт? Регистрирай се ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label12.Location = new System.Drawing.Point(71, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(139, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Потребителско име";
+            // 
+            // LoginPasswordTextBox
+            // 
+            this.LoginPasswordTextBox.Location = new System.Drawing.Point(77, 206);
+            this.LoginPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPasswordTextBox.Name = "LoginPasswordTextBox";
+            this.LoginPasswordTextBox.Size = new System.Drawing.Size(220, 22);
+            this.LoginPasswordTextBox.TabIndex = 2;
+            // 
+            // LoginUsernameTextBox
+            // 
+            this.LoginUsernameTextBox.Location = new System.Drawing.Point(77, 128);
+            this.LoginUsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginUsernameTextBox.Name = "LoginUsernameTextBox";
+            this.LoginUsernameTextBox.Size = new System.Drawing.Size(220, 22);
+            this.LoginUsernameTextBox.TabIndex = 1;
+            // 
+            // RegisterPanel
+            // 
+            this.RegisterPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegisterPanel.BackgroundImage")));
+            this.RegisterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RegisterPanel.Controls.Add(this.panel2);
+            this.RegisterPanel.Controls.Add(this.label9);
+            this.RegisterPanel.Location = new System.Drawing.Point(10, 10);
+            this.RegisterPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterPanel.Name = "RegisterPanel";
+            this.RegisterPanel.Size = new System.Drawing.Size(118, 90);
+            this.RegisterPanel.TabIndex = 4;
+            this.RegisterPanel.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Ivory;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.RegisterButton);
+            this.panel2.Controls.Add(this.OpenLoginPanelLabel);
+            this.panel2.Controls.Add(this.RegisterConfirmPasswordTextBox);
+            this.panel2.Controls.Add(this.RegisterPasswordTextBox);
+            this.panel2.Controls.Add(this.RegisterLastNameTextBox);
+            this.panel2.Controls.Add(this.RegisterFirstNameTextBox);
+            this.panel2.Controls.Add(this.RegisterUsernameTextBox);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(564, 9);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(380, 486);
+            this.panel2.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(81, 458);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 17);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Имаш регистрация. Влез\r\n";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(98, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(175, 29);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Регистрация";
+            // 
+            // RegisterButton
+            // 
+            this.RegisterButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegisterButton.ForeColor = System.Drawing.Color.Ivory;
+            this.RegisterButton.Location = new System.Drawing.Point(104, 400);
+            this.RegisterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(161, 45);
+            this.RegisterButton.TabIndex = 15;
+            this.RegisterButton.Text = "Регистрация";
+            this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
+            // OpenLoginPanelLabel
+            // 
+            this.OpenLoginPanelLabel.AutoSize = true;
+            this.OpenLoginPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OpenLoginPanelLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.OpenLoginPanelLabel.Location = new System.Drawing.Point(259, 458);
+            this.OpenLoginPanelLabel.Name = "OpenLoginPanelLabel";
+            this.OpenLoginPanelLabel.Size = new System.Drawing.Size(44, 17);
+            this.OpenLoginPanelLabel.TabIndex = 14;
+            this.OpenLoginPanelLabel.Text = "оттук";
+            this.OpenLoginPanelLabel.Click += new System.EventHandler(this.OpenLoginPanelLabel_Click);
+            // 
+            // RegisterConfirmPasswordTextBox
+            // 
+            this.RegisterConfirmPasswordTextBox.Location = new System.Drawing.Point(74, 354);
+            this.RegisterConfirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterConfirmPasswordTextBox.Name = "RegisterConfirmPasswordTextBox";
+            this.RegisterConfirmPasswordTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterConfirmPasswordTextBox.TabIndex = 12;
+            // 
+            // RegisterPasswordTextBox
+            // 
+            this.RegisterPasswordTextBox.Location = new System.Drawing.Point(74, 290);
+            this.RegisterPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterPasswordTextBox.Name = "RegisterPasswordTextBox";
+            this.RegisterPasswordTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterPasswordTextBox.TabIndex = 11;
+            // 
+            // RegisterLastNameTextBox
+            // 
+            this.RegisterLastNameTextBox.Location = new System.Drawing.Point(74, 226);
+            this.RegisterLastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterLastNameTextBox.Name = "RegisterLastNameTextBox";
+            this.RegisterLastNameTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterLastNameTextBox.TabIndex = 10;
+            // 
+            // RegisterFirstNameTextBox
+            // 
+            this.RegisterFirstNameTextBox.Location = new System.Drawing.Point(74, 162);
+            this.RegisterFirstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterFirstNameTextBox.Name = "RegisterFirstNameTextBox";
+            this.RegisterFirstNameTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterFirstNameTextBox.TabIndex = 9;
+            // 
+            // RegisterUsernameTextBox
+            // 
+            this.RegisterUsernameTextBox.Location = new System.Drawing.Point(74, 98);
+            this.RegisterUsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterUsernameTextBox.Name = "RegisterUsernameTextBox";
+            this.RegisterUsernameTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterUsernameTextBox.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label8.Location = new System.Drawing.Point(70, 332);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 17);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Потвърди парола";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label7.Location = new System.Drawing.Point(70, 271);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Парола";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label6.Location = new System.Drawing.Point(70, 208);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Фамилия";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label5.Location = new System.Drawing.Point(70, 144);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Име";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label4.Location = new System.Drawing.Point(70, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Потребителско име";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(561, 462);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(173, 17);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Имаш регистрация. Влез\r\n";
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.BackgroundImage = global::LearnSQL.Properties.Resources.Background;
+            this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanel.Controls.Add(this.label13);
+            this.MainPanel.Controls.Add(this.OpenLoginPanelButton);
+            this.MainPanel.Controls.Add(this.OpenRegisterPanelButton);
+            this.MainPanel.Location = new System.Drawing.Point(10, 147);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(130, 95);
+            this.MainPanel.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label13.Location = new System.Drawing.Point(513, 219);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(358, 31);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Добре дошли в LearnSQL";
+            // 
+            // OpenLoginPanelButton
+            // 
+            this.OpenLoginPanelButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.OpenLoginPanelButton.FlatAppearance.BorderSize = 2;
+            this.OpenLoginPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenLoginPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OpenLoginPanelButton.ForeColor = System.Drawing.Color.White;
+            this.OpenLoginPanelButton.Location = new System.Drawing.Point(523, 307);
+            this.OpenLoginPanelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OpenLoginPanelButton.Name = "OpenLoginPanelButton";
+            this.OpenLoginPanelButton.Size = new System.Drawing.Size(168, 64);
+            this.OpenLoginPanelButton.TabIndex = 2;
+            this.OpenLoginPanelButton.Text = "Вход";
+            this.OpenLoginPanelButton.UseVisualStyleBackColor = false;
+            this.OpenLoginPanelButton.Click += new System.EventHandler(this.OpenLoginPanelButton_Click);
+            // 
+            // OpenRegisterPanelButton
+            // 
+            this.OpenRegisterPanelButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.OpenRegisterPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenRegisterPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OpenRegisterPanelButton.ForeColor = System.Drawing.Color.White;
+            this.OpenRegisterPanelButton.Location = new System.Drawing.Point(733, 308);
+            this.OpenRegisterPanelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OpenRegisterPanelButton.Name = "OpenRegisterPanelButton";
+            this.OpenRegisterPanelButton.Size = new System.Drawing.Size(168, 63);
+            this.OpenRegisterPanelButton.TabIndex = 1;
+            this.OpenRegisterPanelButton.Text = "Регистрация";
+            this.OpenRegisterPanelButton.UseVisualStyleBackColor = false;
+            this.OpenRegisterPanelButton.Click += new System.EventHandler(this.OpenRegisterPanelLabel_Click);
+            // 
+            // IntroForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1006, 551);
+            this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.RegisterPanel);
+            this.Controls.Add(this.MainPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1006, 551);
+            this.MinimumSize = new System.Drawing.Size(1006, 551);
+            this.Name = "IntroForm";
+            this.Text = "LoginForm";
+            this.LoginPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.RegisterPanel.ResumeLayout(false);
+            this.RegisterPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.MainPanel.ResumeLayout(false);
+            this.MainPanel.PerformLayout();
+            this.ResumeLayout(false);
 
 		}
 

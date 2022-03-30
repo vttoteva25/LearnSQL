@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using LearnSQL.Controllers;
 
 namespace LearnSQL.Views
 {
@@ -47,5 +48,11 @@ namespace LearnSQL.Views
 		{
 
 		}
-	}
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+			UserController.RegisterUser(RegisterUsernameTextBox.Text, RegisterPasswordTextBox.Text, RegisterFirstNameTextBox.Text, RegisterLastNameTextBox.Text);
+			DesignController.OpenForm(new Course());
+        }
+    }
 }
