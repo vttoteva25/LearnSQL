@@ -5,14 +5,20 @@ namespace LearnSQL.Views
 {
 	public partial class MainForm : Form
 	{
+		Panel main;
+
 		public MainForm()
 		{
 			InitializeComponent();
 
-			Panel main = new Panel();
+			main = new Panel();
 			main.Location = new Point(0, 0);
+		}
 
-			IntroForm form = new IntroForm();
+		public void OpenForm(Form form)
+		{
+			main.Controls.Clear();
+
 			form.TopLevel = false;
 
 			this.Height = form.Height;

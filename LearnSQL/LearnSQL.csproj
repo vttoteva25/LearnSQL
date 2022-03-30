@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Course.cs">
+    <Compile Include="Controllers\DesignController.cs" />
+    <Compile Include="Views\CourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Course.Designer.cs">
-      <DependentUpon>Course.cs</DependentUpon>
+    <Compile Include="Views\CourseForm.Designer.cs">
+      <DependentUpon>CourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PopUpForm.cs">
       <SubType>Form</SubType>
@@ -72,8 +73,8 @@
     <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Course.resx">
-      <DependentUpon>Course.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CourseForm.resx">
+      <DependentUpon>CourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PopUpForm.resx">
       <DependentUpon>PopUpForm.cs</DependentUpon>
