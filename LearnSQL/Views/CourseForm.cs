@@ -1,4 +1,5 @@
-﻿using LearnSQL.Database;
+﻿using LearnSQL.Controllers;
+using LearnSQL.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,10 +45,11 @@ namespace LearnSQL
 			buttons.Add(CriteriaSelectButton);
 			buttons.Add(JoinsSelect);
 
-			for(int i = 0; i < 8; i++)
+			for(int i = 0; i < UserController.LoggedUser.StageId; i++)
 			{
 				buttons[i].Image = null;
 				buttons[i].Text = DbContext.Stages.First(x => x.Id == i + 1).Name;
+				buttons[i].Enabled = true;
 			}
 		}
 
@@ -86,7 +88,70 @@ namespace LearnSQL
 			string headline = DbContext.Stages.First(x => x.Id == 1).Name;
 			string reformText = DbContext.Materials.First(x => x.StageId == 1).Theroy;
 
-			string reformed = headline + Environment.NewLine + reformText.Replace("№", Environment.NewLine);
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void DatatypesButton_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 2).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 2).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void CreateTablesButton_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 3).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 3).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void TableRelationsButton_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 4).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 4).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void InsertInfoButton_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 5).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 5).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void SimpleSelectButton_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 6).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 6).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void CriteriaSelectButton_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 7).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 7).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
+			MaterialsRichTextBox.Text = reformed;
+		}
+
+		private void JoinsSelect_Click(object sender, EventArgs e)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == 8).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == 8).Theroy;
+
+			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
 			MaterialsRichTextBox.Text = reformed;
 		}
 	}

@@ -1,4 +1,5 @@
 ﻿using LearnSQL.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
@@ -15,14 +16,30 @@ namespace LearnSQL.Database
 		public static List<Exercise> Exercises { get; set; }
 		public static List<MaterialExercise> MaterialsExercises { get; set; }
 
-		public static void FillTheDb()
+		public static void FillTheDatabase()
 		{
 			FillUsers();
 			FillStages();
 			FillMaterials();
 			FillExercises();
 			FillMaterialsExercises();
-			
+		}
+
+		public static void WriteInDatabase(string query)
+		{
+			connection = new SqlConnection(connectionString);
+
+			using (connection)
+			{
+				SqlCommand command = new SqlCommand(query, connection);
+
+				connection.Open();
+				int result = command.ExecuteNonQuery();
+
+				// Check Error
+				if (result < 0)
+					throw new Exception();
+			}
 		}
 
 		private static void FillUsers()

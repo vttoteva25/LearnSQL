@@ -62,7 +62,6 @@ namespace LearnSQL.Views
 					UserController.RegisterUser(RegisterUsernameTextBox.Text, RegisterPasswordTextBox.Text, RegisterFirstNameTextBox.Text, RegisterLastNameTextBox.Text);
 					if(DialogResult.OK==MessageBox.Show("Вие успешно се регистрирахте!","Поздравелния",MessageBoxButtons.OK))
                     {
-						this.Close();
 						DesignController.OpenForm(new Course());
 					}
 				}
@@ -77,6 +76,10 @@ namespace LearnSQL.Views
         private void LoginButton_Click(object sender, EventArgs e)
         {
 			UserController.LoginUser(LoginUsernameTextBox.Text, LoginPasswordTextBox.Text);
+			if(!(UserController.LoggedUser is null))
+			{
+				DesignController.OpenForm(new Course());
+			}
         }
     }
 }

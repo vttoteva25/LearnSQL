@@ -33,8 +33,6 @@ namespace LearnSQL
 			this.MaterialsRichTextBox = new System.Windows.Forms.RichTextBox();
 			this.StagePanel = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.IntroductionButton = new System.Windows.Forms.Button();
-			this.OpenPopUpFormButton = new System.Windows.Forms.Button();
 			this.JoinsSelect = new System.Windows.Forms.Button();
 			this.CriteriaSelectButton = new System.Windows.Forms.Button();
 			this.SimpleSelectButton = new System.Windows.Forms.Button();
@@ -42,6 +40,8 @@ namespace LearnSQL
 			this.TableRelationsButton = new System.Windows.Forms.Button();
 			this.CreateTablesButton = new System.Windows.Forms.Button();
 			this.DatatypesButton = new System.Windows.Forms.Button();
+			this.IntroductionButton = new System.Windows.Forms.Button();
+			this.OpenPopUpFormButton = new System.Windows.Forms.Button();
 			this.StagePanel.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -86,6 +86,111 @@ namespace LearnSQL
 			this.panel1.Size = new System.Drawing.Size(288, 561);
 			this.panel1.TabIndex = 6;
 			// 
+			// JoinsSelect
+			// 
+			this.JoinsSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.JoinsSelect.Enabled = false;
+			this.JoinsSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.JoinsSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.JoinsSelect.ForeColor = System.Drawing.Color.White;
+			this.JoinsSelect.Image = ((System.Drawing.Image)(resources.GetObject("JoinsSelect.Image")));
+			this.JoinsSelect.Location = new System.Drawing.Point(0, 488);
+			this.JoinsSelect.Name = "JoinsSelect";
+			this.JoinsSelect.Size = new System.Drawing.Size(289, 72);
+			this.JoinsSelect.TabIndex = 7;
+			this.JoinsSelect.UseVisualStyleBackColor = true;
+			this.JoinsSelect.Click += new System.EventHandler(this.JoinsSelect_Click);
+			// 
+			// CriteriaSelectButton
+			// 
+			this.CriteriaSelectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.CriteriaSelectButton.Enabled = false;
+			this.CriteriaSelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.CriteriaSelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.CriteriaSelectButton.ForeColor = System.Drawing.Color.White;
+			this.CriteriaSelectButton.Image = ((System.Drawing.Image)(resources.GetObject("CriteriaSelectButton.Image")));
+			this.CriteriaSelectButton.Location = new System.Drawing.Point(0, 417);
+			this.CriteriaSelectButton.Name = "CriteriaSelectButton";
+			this.CriteriaSelectButton.Size = new System.Drawing.Size(289, 72);
+			this.CriteriaSelectButton.TabIndex = 6;
+			this.CriteriaSelectButton.UseVisualStyleBackColor = true;
+			this.CriteriaSelectButton.Click += new System.EventHandler(this.CriteriaSelectButton_Click);
+			// 
+			// SimpleSelectButton
+			// 
+			this.SimpleSelectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.SimpleSelectButton.Enabled = false;
+			this.SimpleSelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.SimpleSelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.SimpleSelectButton.ForeColor = System.Drawing.Color.White;
+			this.SimpleSelectButton.Image = ((System.Drawing.Image)(resources.GetObject("SimpleSelectButton.Image")));
+			this.SimpleSelectButton.Location = new System.Drawing.Point(-1, 346);
+			this.SimpleSelectButton.Name = "SimpleSelectButton";
+			this.SimpleSelectButton.Size = new System.Drawing.Size(289, 72);
+			this.SimpleSelectButton.TabIndex = 5;
+			this.SimpleSelectButton.UseVisualStyleBackColor = true;
+			this.SimpleSelectButton.Click += new System.EventHandler(this.SimpleSelectButton_Click);
+			// 
+			// InsertInfoButton
+			// 
+			this.InsertInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.InsertInfoButton.Enabled = false;
+			this.InsertInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.InsertInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.InsertInfoButton.ForeColor = System.Drawing.Color.White;
+			this.InsertInfoButton.Image = ((System.Drawing.Image)(resources.GetObject("InsertInfoButton.Image")));
+			this.InsertInfoButton.Location = new System.Drawing.Point(-1, 276);
+			this.InsertInfoButton.Name = "InsertInfoButton";
+			this.InsertInfoButton.Size = new System.Drawing.Size(289, 72);
+			this.InsertInfoButton.TabIndex = 4;
+			this.InsertInfoButton.UseVisualStyleBackColor = true;
+			this.InsertInfoButton.Click += new System.EventHandler(this.InsertInfoButton_Click);
+			// 
+			// TableRelationsButton
+			// 
+			this.TableRelationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.TableRelationsButton.Enabled = false;
+			this.TableRelationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.TableRelationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.TableRelationsButton.ForeColor = System.Drawing.Color.White;
+			this.TableRelationsButton.Image = ((System.Drawing.Image)(resources.GetObject("TableRelationsButton.Image")));
+			this.TableRelationsButton.Location = new System.Drawing.Point(0, 207);
+			this.TableRelationsButton.Name = "TableRelationsButton";
+			this.TableRelationsButton.Size = new System.Drawing.Size(289, 72);
+			this.TableRelationsButton.TabIndex = 3;
+			this.TableRelationsButton.UseVisualStyleBackColor = true;
+			this.TableRelationsButton.Click += new System.EventHandler(this.TableRelationsButton_Click);
+			// 
+			// CreateTablesButton
+			// 
+			this.CreateTablesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.CreateTablesButton.Enabled = false;
+			this.CreateTablesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.CreateTablesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.CreateTablesButton.ForeColor = System.Drawing.Color.White;
+			this.CreateTablesButton.Image = ((System.Drawing.Image)(resources.GetObject("CreateTablesButton.Image")));
+			this.CreateTablesButton.Location = new System.Drawing.Point(0, 138);
+			this.CreateTablesButton.Name = "CreateTablesButton";
+			this.CreateTablesButton.Size = new System.Drawing.Size(289, 72);
+			this.CreateTablesButton.TabIndex = 2;
+			this.CreateTablesButton.UseVisualStyleBackColor = true;
+			this.CreateTablesButton.Click += new System.EventHandler(this.CreateTablesButton_Click);
+			// 
+			// DatatypesButton
+			// 
+			this.DatatypesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.DatatypesButton.Enabled = false;
+			this.DatatypesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.DatatypesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.DatatypesButton.ForeColor = System.Drawing.Color.White;
+			this.DatatypesButton.Image = ((System.Drawing.Image)(resources.GetObject("DatatypesButton.Image")));
+			this.DatatypesButton.Location = new System.Drawing.Point(0, 68);
+			this.DatatypesButton.Name = "DatatypesButton";
+			this.DatatypesButton.Size = new System.Drawing.Size(289, 72);
+			this.DatatypesButton.TabIndex = 1;
+			this.DatatypesButton.UseVisualStyleBackColor = true;
+			this.DatatypesButton.Click += new System.EventHandler(this.DatatypesButton_Click);
+			// 
 			// IntroductionButton
 			// 
 			this.IntroductionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -113,104 +218,6 @@ namespace LearnSQL
 			this.OpenPopUpFormButton.Text = "Към задачите";
 			this.OpenPopUpFormButton.UseVisualStyleBackColor = false;
 			this.OpenPopUpFormButton.Click += new System.EventHandler(this.button1_Click_1);
-			// 
-			// JoinsSelect
-			// 
-			this.JoinsSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.JoinsSelect.Enabled = false;
-			this.JoinsSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.JoinsSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.JoinsSelect.ForeColor = System.Drawing.Color.White;
-			this.JoinsSelect.Image = ((System.Drawing.Image)(resources.GetObject("JoinsSelect.Image")));
-			this.JoinsSelect.Location = new System.Drawing.Point(0, 489);
-			this.JoinsSelect.Name = "JoinsSelect";
-			this.JoinsSelect.Size = new System.Drawing.Size(289, 72);
-			this.JoinsSelect.TabIndex = 7;
-			this.JoinsSelect.UseVisualStyleBackColor = true;
-			// 
-			// CriteriaSelectButton
-			// 
-			this.CriteriaSelectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.CriteriaSelectButton.Enabled = false;
-			this.CriteriaSelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.CriteriaSelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.CriteriaSelectButton.ForeColor = System.Drawing.Color.White;
-			this.CriteriaSelectButton.Image = ((System.Drawing.Image)(resources.GetObject("CriteriaSelectButton.Image")));
-			this.CriteriaSelectButton.Location = new System.Drawing.Point(0, 418);
-			this.CriteriaSelectButton.Name = "CriteriaSelectButton";
-			this.CriteriaSelectButton.Size = new System.Drawing.Size(289, 72);
-			this.CriteriaSelectButton.TabIndex = 6;
-			this.CriteriaSelectButton.UseVisualStyleBackColor = true;
-			// 
-			// SimpleSelectButton
-			// 
-			this.SimpleSelectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.SimpleSelectButton.Enabled = false;
-			this.SimpleSelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.SimpleSelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.SimpleSelectButton.ForeColor = System.Drawing.Color.White;
-			this.SimpleSelectButton.Image = ((System.Drawing.Image)(resources.GetObject("SimpleSelectButton.Image")));
-			this.SimpleSelectButton.Location = new System.Drawing.Point(-1, 347);
-			this.SimpleSelectButton.Name = "SimpleSelectButton";
-			this.SimpleSelectButton.Size = new System.Drawing.Size(289, 72);
-			this.SimpleSelectButton.TabIndex = 5;
-			this.SimpleSelectButton.UseVisualStyleBackColor = true;
-			// 
-			// InsertInfoButton
-			// 
-			this.InsertInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.InsertInfoButton.Enabled = false;
-			this.InsertInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.InsertInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.InsertInfoButton.ForeColor = System.Drawing.Color.White;
-			this.InsertInfoButton.Image = ((System.Drawing.Image)(resources.GetObject("InsertInfoButton.Image")));
-			this.InsertInfoButton.Location = new System.Drawing.Point(-1, 276);
-			this.InsertInfoButton.Name = "InsertInfoButton";
-			this.InsertInfoButton.Size = new System.Drawing.Size(289, 72);
-			this.InsertInfoButton.TabIndex = 4;
-			this.InsertInfoButton.UseVisualStyleBackColor = true;
-			// 
-			// TableRelationsButton
-			// 
-			this.TableRelationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.TableRelationsButton.Enabled = false;
-			this.TableRelationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.TableRelationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.TableRelationsButton.ForeColor = System.Drawing.Color.White;
-			this.TableRelationsButton.Image = ((System.Drawing.Image)(resources.GetObject("TableRelationsButton.Image")));
-			this.TableRelationsButton.Location = new System.Drawing.Point(0, 207);
-			this.TableRelationsButton.Name = "TableRelationsButton";
-			this.TableRelationsButton.Size = new System.Drawing.Size(289, 72);
-			this.TableRelationsButton.TabIndex = 3;
-			this.TableRelationsButton.UseVisualStyleBackColor = true;
-			// 
-			// CreateTablesButton
-			// 
-			this.CreateTablesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.CreateTablesButton.Enabled = false;
-			this.CreateTablesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.CreateTablesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.CreateTablesButton.ForeColor = System.Drawing.Color.White;
-			this.CreateTablesButton.Image = ((System.Drawing.Image)(resources.GetObject("CreateTablesButton.Image")));
-			this.CreateTablesButton.Location = new System.Drawing.Point(0, 138);
-			this.CreateTablesButton.Name = "CreateTablesButton";
-			this.CreateTablesButton.Size = new System.Drawing.Size(289, 72);
-			this.CreateTablesButton.TabIndex = 2;
-			this.CreateTablesButton.UseVisualStyleBackColor = true;
-			// 
-			// DatatypesButton
-			// 
-			this.DatatypesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.DatatypesButton.Enabled = false;
-			this.DatatypesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.DatatypesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.DatatypesButton.ForeColor = System.Drawing.Color.White;
-			this.DatatypesButton.Image = ((System.Drawing.Image)(resources.GetObject("DatatypesButton.Image")));
-			this.DatatypesButton.Location = new System.Drawing.Point(0, 68);
-			this.DatatypesButton.Name = "DatatypesButton";
-			this.DatatypesButton.Size = new System.Drawing.Size(289, 72);
-			this.DatatypesButton.TabIndex = 1;
-			this.DatatypesButton.UseVisualStyleBackColor = true;
 			// 
 			// Course
 			// 
