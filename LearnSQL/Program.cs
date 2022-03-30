@@ -1,4 +1,5 @@
-﻿using LearnSQL.Views;
+﻿using LearnSQL.Controllers;
+using LearnSQL.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace LearnSQL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(DesignController.GetMainForm());
         }
     }
 }
