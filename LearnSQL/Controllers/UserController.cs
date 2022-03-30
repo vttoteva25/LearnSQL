@@ -28,12 +28,12 @@ namespace LearnSQL.Controllers
                 }
                 else
                 { 
-                    MessageBox.Show("Incorrect Username or Password", "Error"); 
+                    MessageBox.Show("Грешно име или парола!", "Грешка"); 
                 }
             }
             else
             {
-                MessageBox.Show("Incorrect Username or Password", "Error");
+                MessageBox.Show("Грешно име или парола!", "Грешка");
             }
         }
     }

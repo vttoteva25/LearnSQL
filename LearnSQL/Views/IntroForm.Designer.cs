@@ -73,10 +73,10 @@ namespace LearnSQL.Views
             this.LoginPanel.BackgroundImage = global::LearnSQL.Properties.Resources.Background;
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginPanel.Controls.Add(this.panel1);
-            this.LoginPanel.Location = new System.Drawing.Point(13, 312);
-            this.LoginPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPanel.Location = new System.Drawing.Point(11, 288);
+            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(115, 62);
+            this.LoginPanel.Size = new System.Drawing.Size(115, 89);
             this.LoginPanel.TabIndex = 5;
             this.LoginPanel.Visible = false;
             // 
@@ -91,10 +91,10 @@ namespace LearnSQL.Views
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.LoginPasswordTextBox);
             this.panel1.Controls.Add(this.LoginUsernameTextBox);
-            this.panel1.Location = new System.Drawing.Point(575, 51);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(431, 41);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 396);
+            this.panel1.Size = new System.Drawing.Size(266, 322);
             this.panel1.TabIndex = 8;
             // 
             // label10
@@ -102,9 +102,10 @@ namespace LearnSQL.Views
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(145, 41);
+            this.label10.Location = new System.Drawing.Point(109, 33);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 31);
+            this.label10.Size = new System.Drawing.Size(67, 26);
             this.label10.TabIndex = 8;
             this.label10.Text = "Вход";
             // 
@@ -114,22 +115,24 @@ namespace LearnSQL.Views
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LoginButton.ForeColor = System.Drawing.SystemColors.Info;
-            this.LoginButton.Location = new System.Drawing.Point(118, 265);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginButton.Location = new System.Drawing.Point(88, 215);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(130, 49);
+            this.LoginButton.Size = new System.Drawing.Size(98, 40);
             this.LoginButton.TabIndex = 7;
             this.LoginButton.Text = "Вход";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // OpenRegisterPanelLabel
             // 
             this.OpenRegisterPanelLabel.AutoSize = true;
             this.OpenRegisterPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OpenRegisterPanelLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.OpenRegisterPanelLabel.Location = new System.Drawing.Point(257, 340);
+            this.OpenRegisterPanelLabel.Location = new System.Drawing.Point(193, 276);
+            this.OpenRegisterPanelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OpenRegisterPanelLabel.Name = "OpenRegisterPanelLabel";
-            this.OpenRegisterPanelLabel.Size = new System.Drawing.Size(44, 17);
+            this.OpenRegisterPanelLabel.Size = new System.Drawing.Size(34, 13);
             this.OpenRegisterPanelLabel.TabIndex = 6;
             this.OpenRegisterPanelLabel.Text = "оттук";
             this.OpenRegisterPanelLabel.Click += new System.EventHandler(this.OpenRegisterPanelLabel_Click);
@@ -138,18 +141,20 @@ namespace LearnSQL.Views
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label2.Location = new System.Drawing.Point(74, 181);
+            this.label2.Location = new System.Drawing.Point(56, 147);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Парола";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 340);
+            this.label3.Location = new System.Drawing.Point(29, 276);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 17);
+            this.label3.Size = new System.Drawing.Size(172, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Нямаш акаунт? Регистрирай се ";
             // 
@@ -157,26 +162,28 @@ namespace LearnSQL.Views
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label12.Location = new System.Drawing.Point(71, 110);
+            this.label12.Location = new System.Drawing.Point(53, 89);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(139, 17);
+            this.label12.Size = new System.Drawing.Size(108, 13);
             this.label12.TabIndex = 3;
             this.label12.Text = "Потребителско име";
             // 
             // LoginPasswordTextBox
             // 
-            this.LoginPasswordTextBox.Location = new System.Drawing.Point(77, 206);
-            this.LoginPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPasswordTextBox.Location = new System.Drawing.Point(58, 167);
+            this.LoginPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginPasswordTextBox.Name = "LoginPasswordTextBox";
-            this.LoginPasswordTextBox.Size = new System.Drawing.Size(220, 22);
+            this.LoginPasswordTextBox.PasswordChar = '*';
+            this.LoginPasswordTextBox.Size = new System.Drawing.Size(166, 20);
             this.LoginPasswordTextBox.TabIndex = 2;
             // 
             // LoginUsernameTextBox
             // 
-            this.LoginUsernameTextBox.Location = new System.Drawing.Point(77, 128);
-            this.LoginUsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginUsernameTextBox.Location = new System.Drawing.Point(58, 104);
+            this.LoginUsernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginUsernameTextBox.Name = "LoginUsernameTextBox";
-            this.LoginUsernameTextBox.Size = new System.Drawing.Size(220, 22);
+            this.LoginUsernameTextBox.Size = new System.Drawing.Size(166, 20);
             this.LoginUsernameTextBox.TabIndex = 1;
             // 
             // RegisterPanel
@@ -185,10 +192,10 @@ namespace LearnSQL.Views
             this.RegisterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RegisterPanel.Controls.Add(this.panel2);
             this.RegisterPanel.Controls.Add(this.label9);
-            this.RegisterPanel.Location = new System.Drawing.Point(10, 10);
-            this.RegisterPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterPanel.Location = new System.Drawing.Point(8, 8);
+            this.RegisterPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterPanel.Name = "RegisterPanel";
-            this.RegisterPanel.Size = new System.Drawing.Size(118, 90);
+            this.RegisterPanel.Size = new System.Drawing.Size(118, 104);
             this.RegisterPanel.TabIndex = 4;
             this.RegisterPanel.Visible = false;
             // 
@@ -209,18 +216,19 @@ namespace LearnSQL.Views
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(564, 9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(423, 7);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 486);
+            this.panel2.Size = new System.Drawing.Size(285, 395);
             this.panel2.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 458);
+            this.label1.Location = new System.Drawing.Point(61, 372);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 17);
+            this.label1.Size = new System.Drawing.Size(135, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Имаш регистрация. Влез\r\n";
             // 
@@ -228,9 +236,10 @@ namespace LearnSQL.Views
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(98, 37);
+            this.label11.Location = new System.Drawing.Point(74, 30);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(175, 29);
+            this.label11.Size = new System.Drawing.Size(137, 24);
             this.label11.TabIndex = 16;
             this.label11.Text = "Регистрация";
             // 
@@ -240,10 +249,10 @@ namespace LearnSQL.Views
             this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegisterButton.ForeColor = System.Drawing.Color.Ivory;
-            this.RegisterButton.Location = new System.Drawing.Point(104, 400);
-            this.RegisterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterButton.Location = new System.Drawing.Point(78, 325);
+            this.RegisterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(161, 45);
+            this.RegisterButton.Size = new System.Drawing.Size(121, 37);
             this.RegisterButton.TabIndex = 15;
             this.RegisterButton.Text = "Регистрация";
             this.RegisterButton.UseVisualStyleBackColor = false;
@@ -254,60 +263,64 @@ namespace LearnSQL.Views
             this.OpenLoginPanelLabel.AutoSize = true;
             this.OpenLoginPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OpenLoginPanelLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.OpenLoginPanelLabel.Location = new System.Drawing.Point(259, 458);
+            this.OpenLoginPanelLabel.Location = new System.Drawing.Point(194, 372);
+            this.OpenLoginPanelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OpenLoginPanelLabel.Name = "OpenLoginPanelLabel";
-            this.OpenLoginPanelLabel.Size = new System.Drawing.Size(44, 17);
+            this.OpenLoginPanelLabel.Size = new System.Drawing.Size(34, 13);
             this.OpenLoginPanelLabel.TabIndex = 14;
             this.OpenLoginPanelLabel.Text = "оттук";
             this.OpenLoginPanelLabel.Click += new System.EventHandler(this.OpenLoginPanelLabel_Click);
             // 
             // RegisterConfirmPasswordTextBox
             // 
-            this.RegisterConfirmPasswordTextBox.Location = new System.Drawing.Point(74, 354);
-            this.RegisterConfirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterConfirmPasswordTextBox.Location = new System.Drawing.Point(56, 288);
+            this.RegisterConfirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterConfirmPasswordTextBox.Name = "RegisterConfirmPasswordTextBox";
-            this.RegisterConfirmPasswordTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterConfirmPasswordTextBox.PasswordChar = '*';
+            this.RegisterConfirmPasswordTextBox.Size = new System.Drawing.Size(175, 20);
             this.RegisterConfirmPasswordTextBox.TabIndex = 12;
             // 
             // RegisterPasswordTextBox
             // 
-            this.RegisterPasswordTextBox.Location = new System.Drawing.Point(74, 290);
-            this.RegisterPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterPasswordTextBox.Location = new System.Drawing.Point(56, 236);
+            this.RegisterPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterPasswordTextBox.Name = "RegisterPasswordTextBox";
-            this.RegisterPasswordTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterPasswordTextBox.PasswordChar = '*';
+            this.RegisterPasswordTextBox.Size = new System.Drawing.Size(175, 20);
             this.RegisterPasswordTextBox.TabIndex = 11;
             // 
             // RegisterLastNameTextBox
             // 
-            this.RegisterLastNameTextBox.Location = new System.Drawing.Point(74, 226);
-            this.RegisterLastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterLastNameTextBox.Location = new System.Drawing.Point(56, 184);
+            this.RegisterLastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterLastNameTextBox.Name = "RegisterLastNameTextBox";
-            this.RegisterLastNameTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterLastNameTextBox.Size = new System.Drawing.Size(175, 20);
             this.RegisterLastNameTextBox.TabIndex = 10;
             // 
             // RegisterFirstNameTextBox
             // 
-            this.RegisterFirstNameTextBox.Location = new System.Drawing.Point(74, 162);
-            this.RegisterFirstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterFirstNameTextBox.Location = new System.Drawing.Point(56, 132);
+            this.RegisterFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterFirstNameTextBox.Name = "RegisterFirstNameTextBox";
-            this.RegisterFirstNameTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterFirstNameTextBox.Size = new System.Drawing.Size(175, 20);
             this.RegisterFirstNameTextBox.TabIndex = 9;
             // 
             // RegisterUsernameTextBox
             // 
-            this.RegisterUsernameTextBox.Location = new System.Drawing.Point(74, 98);
-            this.RegisterUsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterUsernameTextBox.Location = new System.Drawing.Point(56, 80);
+            this.RegisterUsernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterUsernameTextBox.Name = "RegisterUsernameTextBox";
-            this.RegisterUsernameTextBox.Size = new System.Drawing.Size(232, 22);
+            this.RegisterUsernameTextBox.Size = new System.Drawing.Size(175, 20);
             this.RegisterUsernameTextBox.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label8.Location = new System.Drawing.Point(70, 332);
+            this.label8.Location = new System.Drawing.Point(52, 270);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 17);
+            this.label8.Size = new System.Drawing.Size(96, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Потвърди парола";
             // 
@@ -315,9 +328,10 @@ namespace LearnSQL.Views
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label7.Location = new System.Drawing.Point(70, 271);
+            this.label7.Location = new System.Drawing.Point(52, 220);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Парола";
             // 
@@ -325,9 +339,10 @@ namespace LearnSQL.Views
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label6.Location = new System.Drawing.Point(70, 208);
+            this.label6.Location = new System.Drawing.Point(52, 169);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Фамилия";
             // 
@@ -335,9 +350,10 @@ namespace LearnSQL.Views
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label5.Location = new System.Drawing.Point(70, 144);
+            this.label5.Location = new System.Drawing.Point(52, 117);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 17);
+            this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Име";
             // 
@@ -345,18 +361,20 @@ namespace LearnSQL.Views
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(70, 80);
+            this.label4.Location = new System.Drawing.Point(52, 65);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 17);
+            this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Потребителско име";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(561, 462);
+            this.label9.Location = new System.Drawing.Point(421, 375);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(173, 17);
+            this.label9.Size = new System.Drawing.Size(135, 13);
             this.label9.TabIndex = 13;
             this.label9.Text = "Имаш регистрация. Влез\r\n";
             // 
@@ -367,10 +385,10 @@ namespace LearnSQL.Views
             this.MainPanel.Controls.Add(this.label13);
             this.MainPanel.Controls.Add(this.OpenLoginPanelButton);
             this.MainPanel.Controls.Add(this.OpenRegisterPanelButton);
-            this.MainPanel.Location = new System.Drawing.Point(10, 147);
-            this.MainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainPanel.Location = new System.Drawing.Point(11, 132);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(130, 95);
+            this.MainPanel.Size = new System.Drawing.Size(115, 91);
             this.MainPanel.TabIndex = 3;
             // 
             // label13
@@ -379,9 +397,10 @@ namespace LearnSQL.Views
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label13.Location = new System.Drawing.Point(513, 219);
+            this.label13.Location = new System.Drawing.Point(385, 178);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(358, 31);
+            this.label13.Size = new System.Drawing.Size(297, 26);
             this.label13.TabIndex = 3;
             this.label13.Text = "Добре дошли в LearnSQL";
             // 
@@ -392,10 +411,10 @@ namespace LearnSQL.Views
             this.OpenLoginPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenLoginPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OpenLoginPanelButton.ForeColor = System.Drawing.Color.White;
-            this.OpenLoginPanelButton.Location = new System.Drawing.Point(523, 307);
-            this.OpenLoginPanelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OpenLoginPanelButton.Location = new System.Drawing.Point(392, 249);
+            this.OpenLoginPanelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpenLoginPanelButton.Name = "OpenLoginPanelButton";
-            this.OpenLoginPanelButton.Size = new System.Drawing.Size(168, 64);
+            this.OpenLoginPanelButton.Size = new System.Drawing.Size(126, 52);
             this.OpenLoginPanelButton.TabIndex = 2;
             this.OpenLoginPanelButton.Text = "Вход";
             this.OpenLoginPanelButton.UseVisualStyleBackColor = false;
@@ -407,10 +426,10 @@ namespace LearnSQL.Views
             this.OpenRegisterPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenRegisterPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OpenRegisterPanelButton.ForeColor = System.Drawing.Color.White;
-            this.OpenRegisterPanelButton.Location = new System.Drawing.Point(733, 308);
-            this.OpenRegisterPanelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OpenRegisterPanelButton.Location = new System.Drawing.Point(550, 250);
+            this.OpenRegisterPanelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpenRegisterPanelButton.Name = "OpenRegisterPanelButton";
-            this.OpenRegisterPanelButton.Size = new System.Drawing.Size(168, 63);
+            this.OpenRegisterPanelButton.Size = new System.Drawing.Size(126, 51);
             this.OpenRegisterPanelButton.TabIndex = 1;
             this.OpenRegisterPanelButton.Text = "Регистрация";
             this.OpenRegisterPanelButton.UseVisualStyleBackColor = false;
@@ -418,16 +437,16 @@ namespace LearnSQL.Views
             // 
             // IntroForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 551);
+            this.ClientSize = new System.Drawing.Size(754, 448);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.RegisterPanel);
             this.Controls.Add(this.MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1006, 551);
-            this.MinimumSize = new System.Drawing.Size(1006, 551);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(754, 448);
+            this.MinimumSize = new System.Drawing.Size(754, 448);
             this.Name = "IntroForm";
             this.Text = "LoginForm";
             this.LoginPanel.ResumeLayout(false);
