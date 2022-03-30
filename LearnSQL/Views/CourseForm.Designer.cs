@@ -49,6 +49,7 @@ namespace LearnSQL
 			// MaterialsRichTextBox
 			// 
 			this.MaterialsRichTextBox.BackColor = System.Drawing.Color.Ivory;
+			this.MaterialsRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.MaterialsRichTextBox.Location = new System.Drawing.Point(338, 21);
 			this.MaterialsRichTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.MaterialsRichTextBox.Name = "MaterialsRichTextBox";
@@ -96,6 +97,7 @@ namespace LearnSQL
 			this.IntroductionButton.TabIndex = 0;
 			this.IntroductionButton.Text = "Въведение";
 			this.IntroductionButton.UseVisualStyleBackColor = true;
+			this.IntroductionButton.Click += new System.EventHandler(this.IntroductionButton_Click);
 			// 
 			// OpenPopUpFormButton
 			// 
