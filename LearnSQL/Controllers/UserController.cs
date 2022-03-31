@@ -15,7 +15,9 @@ namespace LearnSQL.Controllers
         public static User LoggedUser { get; set; }
         public static void RegisterUser(string username, string password, string firstName, string surname)
         {
-            DbContext.Users.Add(new User(username, firstName, surname, password, 1));
+            User registerUser = new User(username, firstName, surname, password, 1);
+            DbContext.Users.Add(registerUser);
+            LoggedUser = registerUser;
             DbContext.WriteInDatabase($"INSERT INTO Users (Username, Name, Surname, Password, Stage) VALUES ('{username}', '{firstName}', '{surname}', '{password}', 1)");
         }
         public static void LoginUser(string username,string password)
