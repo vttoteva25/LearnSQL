@@ -30,10 +30,10 @@ namespace LearnSQL
         private void InitializeComponent()
         {
 			this.CheckButton = new System.Windows.Forms.Button();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.problemBox = new System.Windows.Forms.RichTextBox();
 			this.CancelButton = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+			this.solutionBox = new System.Windows.Forms.RichTextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -51,13 +51,15 @@ namespace LearnSQL
 			this.CheckButton.UseVisualStyleBackColor = false;
 			this.CheckButton.Click += new System.EventHandler(this.CheckButton_Click);
 			// 
-			// richTextBox1
+			// problemBox
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(31, 74);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(416, 345);
-			this.richTextBox1.TabIndex = 1;
-			this.richTextBox1.Text = "";
+			this.problemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.problemBox.Location = new System.Drawing.Point(31, 74);
+			this.problemBox.Name = "problemBox";
+			this.problemBox.ReadOnly = true;
+			this.problemBox.Size = new System.Drawing.Size(416, 345);
+			this.problemBox.TabIndex = 1;
+			this.problemBox.Text = "";
 			// 
 			// CancelButton
 			// 
@@ -84,13 +86,13 @@ namespace LearnSQL
 			this.label1.TabIndex = 3;
 			this.label1.Text = "Условие";
 			// 
-			// richTextBox2
+			// solutionBox
 			// 
-			this.richTextBox2.Location = new System.Drawing.Point(482, 74);
-			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(416, 345);
-			this.richTextBox2.TabIndex = 4;
-			this.richTextBox2.Text = "";
+			this.solutionBox.Location = new System.Drawing.Point(482, 74);
+			this.solutionBox.Name = "solutionBox";
+			this.solutionBox.Size = new System.Drawing.Size(416, 345);
+			this.solutionBox.TabIndex = 4;
+			this.solutionBox.Text = "";
 			// 
 			// label2
 			// 
@@ -110,10 +112,10 @@ namespace LearnSQL
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.ClientSize = new System.Drawing.Size(921, 537);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.richTextBox2);
+			this.Controls.Add(this.solutionBox);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.CancelButton);
-			this.Controls.Add(this.richTextBox1);
+			this.Controls.Add(this.problemBox);
 			this.Controls.Add(this.CheckButton);
 			this.Name = "PopUpForm";
 			this.Text = "Задача";
@@ -125,10 +127,10 @@ namespace LearnSQL
         #endregion
 
         private System.Windows.Forms.Button CheckButton;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox problemBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.RichTextBox richTextBox2;
+		private System.Windows.Forms.RichTextBox solutionBox;
 		private System.Windows.Forms.Label label2;
 	}
 }

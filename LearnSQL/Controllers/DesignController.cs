@@ -1,4 +1,5 @@
-﻿using LearnSQL.Views;
+﻿using LearnSQL.Database;
+using LearnSQL.Views;
 using System.Windows.Forms;
 
 namespace LearnSQL.Controllers
@@ -6,9 +7,7 @@ namespace LearnSQL.Controllers
 	public static class DesignController
 	{
 		static MainForm mainForm;
-		static Course courseForm;
 		static IntroForm introForm;
-		static PopUpForm excersiseForm;
 
 		public static Form GetMainForm()
 		{
@@ -21,11 +20,6 @@ namespace LearnSQL.Controllers
 		public static void OpenForm(Form form)
 		{
 			mainForm.OpenForm(form);
-		}
-
-		public static void OpenPopUp(Form form)
-		{
-			form.Show();
 		}
 	}
 }

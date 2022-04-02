@@ -15,7 +15,7 @@ VALUES ('AF', 'Africa'),
 
 -- 
 
-INSERT INTO Countries 
+INSERT Countries(ID, Name, ContinentID, Capital) 
 
 VALUES ('AD', 'Andorra', 'EU','Andorra la Vella'), 
 
@@ -575,7 +575,7 @@ VALUES  (1, 'Alaska Range'),
 
 -- 
 
-INSERT INTO MountainsCountries
+INSERT INTO CountriesMountains(MountainID,CountryID)
 
 VALUES  (3, 'AR'), 
 

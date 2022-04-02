@@ -1,5 +1,6 @@
 ﻿using LearnSQL.Controllers;
 using LearnSQL.Database;
+using LearnSQL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,10 @@ namespace LearnSQL
 {
 	public partial class Course : Form
 	{
-		public PopUpForm form = new PopUpForm();
-		List<Button> buttons = new List<Button>();
+		public static int buttonIndex = 0;
+		int lastClickedIndex = 0;
+
+		public static List<Button> buttons = new List<Button>();
 
 		private void changePanel(Panel p, Panel p2)
 		{
@@ -24,7 +27,6 @@ namespace LearnSQL
 			p.Size = new Size(1056, 684);
 
 			p2.Visible = false;
-
 		}
 
 		public Course()
@@ -45,114 +47,114 @@ namespace LearnSQL
 			buttons.Add(CriteriaSelectButton);
 			buttons.Add(JoinsSelect);
 
-			for(int i = 0; i < UserController.LoggedUser.StageId; i++)
+			for (buttonIndex = 0; buttonIndex < UserController.LoggedUser.StageId; buttonIndex++)
 			{
-				buttons[i].Image = null;
-				buttons[i].Text = DbContext.Stages.First(x => x.Id == i + 1).Name;
-				buttons[i].Enabled = true;
+				UnlockButton(buttons[buttonIndex], buttonIndex);
 			}
+
+			buttons[buttonIndex - 1].ForeColor = Color.White;
+			ExButton.Text = null;
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		public static void UnlockButton(Button button, int index)
 		{
+			button.Image = null;
+			button.Text = DbContext.Stages.First(x => x.Id == index + 1).Name;
+			button.Enabled = true;
 
-		}
+			if (buttonIndex == 0 || buttonIndex == 1)
+			{
+				ExButton.Text = "Продължи";
+			}
+			else
+			{
+				ExButton.Text = "Упражнения";
+			}
 
-		private void previousButton_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void checkBox1_CheckedChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void button2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-
+			buttons[buttonIndex].ForeColor = Color.MediumSeaGreen;
 		}
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
-			form.Show();
+			if (ExButton.Text == "Продължи" && buttons[buttonIndex].ForeColor != Color.MediumSeaGreen)
+			{
+				if (buttonIndex < DbContext.Stages.Count())
+				{
+					UserController.NextStage();
+					UnlockButton(buttons[buttonIndex], buttonIndex);
+					buttons[buttonIndex].ForeColor = Color.MediumSeaGreen;
+					buttonIndex++;
+				}
+			}
+			else
+			{
+				List<MaterialExercise> exercisesIds = DbContext.MaterialsExercises.Where(x => x.MaterialId == lastClickedIndex).ToList();
+				List<Exercise> exercises = DbContext.Exercises.Where(x => exercisesIds.Any(y => y.ExerciseId == x.Id)).ToList();
+
+				PopUpForm pop = new PopUpForm(exercises);
+				pop.Show();
+			}
 		}
 
 		private void IntroductionButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 1).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 1).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(1);
 		}
 
 		private void DatatypesButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 2).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 2).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(2);
 		}
 
 		private void CreateTablesButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 3).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 3).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(3);
 		}
 
 		private void TableRelationsButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 4).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 4).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(4);
 		}
 
 		private void InsertInfoButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 5).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 5).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(5);
 		}
 
 		private void SimpleSelectButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 6).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 6).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(6);
 		}
 
 		private void CriteriaSelectButton_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 7).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 7).Theroy;
-
-			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
-			MaterialsRichTextBox.Text = reformed;
+			DisplayTheory(7);
 		}
 
 		private void JoinsSelect_Click(object sender, EventArgs e)
 		{
-			string headline = DbContext.Stages.First(x => x.Id == 8).Name;
-			string reformText = DbContext.Materials.First(x => x.StageId == 8).Theroy;
+			DisplayTheory(8);
+		}
+
+		private void DisplayTheory(int stageIndex)
+		{
+			string headline = DbContext.Stages.First(x => x.Id == stageIndex).Name;
+			string reformText = DbContext.Materials.First(x => x.StageId == stageIndex).Theroy;
 
 			string reformed = headline + Environment.NewLine + Environment.NewLine + reformText;
 			MaterialsRichTextBox.Text = reformed;
+
+			if (stageIndex > 2)
+			{
+				ExButton.Text = "Упражнения";
+			}
+			else
+			{
+				ExButton.Text = "Продължи";
+			}
+
+			lastClickedIndex = stageIndex;
+			ExerciseControler.RecreateDatabase(stageIndex);
 		}
 	}
 }
