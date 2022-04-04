@@ -38,5 +38,10 @@ namespace LearnSQL.Controllers
                 MessageBox.Show("Грешно име или парола!", "Грешка");
             }
         }
+        public static void NextStage()
+		{
+            LoggedUser.StageId++;
+            DbContext.WriteInDatabase($"UPDATE Users SET Stage = {LoggedUser.StageId} WHERE Username = '{LoggedUser.Username}'");
+		}
     }
 }

@@ -41,7 +41,7 @@ namespace LearnSQL
 			this.CreateTablesButton = new System.Windows.Forms.Button();
 			this.DatatypesButton = new System.Windows.Forms.Button();
 			this.IntroductionButton = new System.Windows.Forms.Button();
-			this.OpenPopUpFormButton = new System.Windows.Forms.Button();
+			ExButton = new System.Windows.Forms.Button();
 			this.StagePanel.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -61,7 +61,7 @@ namespace LearnSQL
 			// StagePanel
 			// 
 			this.StagePanel.Controls.Add(this.panel1);
-			this.StagePanel.Controls.Add(this.OpenPopUpFormButton);
+			this.StagePanel.Controls.Add(ExButton);
 			this.StagePanel.Controls.Add(this.MaterialsRichTextBox);
 			this.StagePanel.Location = new System.Drawing.Point(-2, -1);
 			this.StagePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -204,20 +204,20 @@ namespace LearnSQL
 			this.IntroductionButton.UseVisualStyleBackColor = true;
 			this.IntroductionButton.Click += new System.EventHandler(this.IntroductionButton_Click);
 			// 
-			// OpenPopUpFormButton
+			// ExButton
 			// 
-			this.OpenPopUpFormButton.BackColor = System.Drawing.Color.MediumSeaGreen;
-			this.OpenPopUpFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.OpenPopUpFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.OpenPopUpFormButton.ForeColor = System.Drawing.Color.White;
-			this.OpenPopUpFormButton.Location = new System.Drawing.Point(760, 554);
-			this.OpenPopUpFormButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.OpenPopUpFormButton.Name = "OpenPopUpFormButton";
-			this.OpenPopUpFormButton.Size = new System.Drawing.Size(249, 62);
-			this.OpenPopUpFormButton.TabIndex = 5;
-			this.OpenPopUpFormButton.Text = "Към задачите";
-			this.OpenPopUpFormButton.UseVisualStyleBackColor = false;
-			this.OpenPopUpFormButton.Click += new System.EventHandler(this.button1_Click_1);
+			ExButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+			ExButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			ExButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			ExButton.ForeColor = System.Drawing.Color.White;
+			ExButton.Location = new System.Drawing.Point(760, 554);
+			ExButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			ExButton.Name = "ExButton";
+			ExButton.Size = new System.Drawing.Size(249, 62);
+			ExButton.TabIndex = 5;
+			ExButton.Text = "Към задачите";
+			ExButton.UseVisualStyleBackColor = false;
+			ExButton.Click += new System.EventHandler(this.button1_Click_1);
 			// 
 			// Course
 			// 
@@ -243,7 +243,7 @@ namespace LearnSQL
 
         private System.Windows.Forms.RichTextBox MaterialsRichTextBox;
         private System.Windows.Forms.Panel StagePanel;
-        private System.Windows.Forms.Button OpenPopUpFormButton;
+        private static System.Windows.Forms.Button ExButton;
         private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button JoinsSelect;
 		private System.Windows.Forms.Button CriteriaSelectButton;

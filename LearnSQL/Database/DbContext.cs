@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
 
 namespace LearnSQL.Database
 {
@@ -23,6 +25,7 @@ namespace LearnSQL.Database
 			FillMaterials();
 			FillExercises();
 			FillMaterialsExercises();
+			SetUpInsideConnections();
 		}
 
 		public static void WriteInDatabase(string query)
@@ -154,6 +157,25 @@ namespace LearnSQL.Database
 						MaterialsExercises.Add(new MaterialExercise(reader[0], reader[1]));
 					}
 				}
+			}
+		}
+
+		private static void SetUpInsideConnections()
+		{
+			foreach(MaterialExercise m in MaterialsExercises)
+			{
+				m.Exercise = Exercises.Find(x => x.Id == m.ExerciseId);
+				m.Material = Materials.Find(x => x.Id == m.MaterialId);
+			}
+
+			foreach(Material m in Materials)
+			{
+				m.Stage = Stages.Find(x => x.Id == m.Id);
+			}
+
+			foreach (User u in Users)
+			{
+				u.Stage = Stages.Find(x => x.Id == u.StageId);
 			}
 		}
 

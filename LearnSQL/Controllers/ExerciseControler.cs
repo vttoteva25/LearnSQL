@@ -5,16 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using LearnSQL.Models;
+using LearnSQL.Database;
+using System.IO;
 
 namespace LearnSQL.Controllers
 {
     public static class ExerciseControler
     {
         private static SqlConnection connection;
-        private static string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=ExerciseSQL;Integrated Security=True";
-        public static void ValidateNonSelectQuery(string expected, string query)
+        private static string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=LearnSQLExercises;Integrated Security=True";
+        public static bool ValidateNonSelectQuery(string expected, string query)
         {
-            if (query.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries) == expected.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
+            List<string> queryItems = query.Replace("\n", " ").Replace('(', ' ').Replace(')', ' ').Replace(",", " ").Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            List<string> expectedItems = expected.Replace("\n", " ").Replace('(', ' ').Replace(')', ' ').Replace(",", " ").Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            if (queryItems.All(expectedItems.Contains))
             {
                 MessageBox.Show("Вашата заявка беше изпълнена успешно!", "Поздравления!");
                 connection = new SqlConnection(connectionString);
@@ -25,13 +31,15 @@ namespace LearnSQL.Controllers
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
+                return true;
             }
             else
             {
-                MessageBox.Show("Имате грешка в синтаксиса на заявката!", "Грешка!");
+                MessageBox.Show(string.Join(" ", expectedItems) + "/////" +string.Join(" ", queryItems), "Грешка!");
             }
+            return false;
         }
-        public static void ValidateSelectQuery(string expected, string query)
+        public static bool ValidateSelectQuery(string expected, string query)
         {
             try
             {
@@ -70,17 +78,104 @@ namespace LearnSQL.Controllers
                 if (ExpectedOutput == QueryOutput)
                 {
                     MessageBox.Show("Вашата заявка бе успешно изпълнена!", "Поздравления!");
+                    return true;
                 }
                 else
                 {
                     MessageBox.Show("Грешка при синтаксиса на заявката! Заявката връща грешен резултат!", "Грешка!");
+                    return false;
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Грешка при синтаксиса на заявката! Заявката не може да се изпълни!", "Грешка!");
+                return false;
+            }
+        }
+        public static void CreateExercisesDatabase()
+        {
+            DeleteDatabase();
+
+            string createQuery = "CREATE DATABASE LearnSQLExercises";
+            connection = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Database=master;Integrated Security=True");
+
+            using (connection)
+            {
+                try
+                {
+                    SqlCommand command = new SqlCommand(createQuery, connection);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
+        private static void DeleteDatabase()
+		{
+            string deleteQuery = "ALTER DATABASE LearnSQLExercises SET SINGLE_USER WITH ROLLBACK IMMEDIATE DROP DATABASE LearnSQLExercises;";
+            connection = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Database=master;Integrated Security=True");
+
+            using (connection)
+            {
+                try
+                {
+                    SqlCommand command = new SqlCommand(deleteQuery, connection);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
+        }
+
+        public static void RecreateDatabase(int stage)
+        {
+            CreateExercisesDatabase();
+
+            List<MaterialExercise> helper = DbContext.MaterialsExercises.FindAll(y => y.Material.StageId < stage).ToList();
+            List<Exercise> exercises = DbContext.Exercises.Where(x => helper.Select(y => y.ExerciseId).Contains(x.Id)).ToList();
+            List<Exercise> filtered = exercises.Where(x => x.Solution.Contains("INSERT") || x.Solution.Contains("CREATE") || x.Solution.Contains("ALTER")).ToList();
+
+            foreach (Exercise exercise in filtered)
+            {
+				if (exercise.Solution.Contains("INSERT"))
+				{
+                    List<string> path = Environment.CurrentDirectory.Split('\\').ToList();
+                    path.RemoveRange(path.Count - 2, 2);
+                    path.AddRange(new List<string>() { "Database", "FillMountainsAndCountriesDb.sql" });
+                    string query = File.ReadAllText(string.Join("\\", path));
+
+                    connection = new SqlConnection(connectionString);
+
+                    using (connection)
+                    {
+                        SqlCommand command = new SqlCommand(query, connection);
+
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+                    }
+                }
+				else
+				{
+                    connection = new SqlConnection(connectionString);
+
+                    using (connection)
+                    {
+                        SqlCommand command = new SqlCommand(exercise.Solution, connection);
+
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+                    }
+                }
             }
         }
     }
-
 }
