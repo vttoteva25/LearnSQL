@@ -38,7 +38,7 @@ VALUES
 (
 	8,
 	N'Напълнете таблицата континенти със следните имена на континенти: Africa, Antarctica, Asia, Europe, North America, Oceania, South America',
-	N'INSERT continentes VALUES (^AF^, ^Africa^), (^AN^, ^Antarctica^), (^AS^, ^Asia^), (^EU^, ^Europe^), (^NA^, ^North America^), (^OC^, ^Oceania^), (^SA^, ^South America^);'
+	N'INSERT Continentes VALUES (^AF^, ^Africa^), (^AN^, ^Antarctica^), (^AS^, ^Asia^), (^EU^, ^Europe^), (^NA^, ^North America^), (^OC^, ^Oceania^), (^SA^, ^South America^);'
 ),
 (
 	9,
