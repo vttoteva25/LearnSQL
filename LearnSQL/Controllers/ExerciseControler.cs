@@ -17,6 +17,8 @@ namespace LearnSQL.Controllers
         private static string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=LearnSQLExercises;Integrated Security=True";
         public static bool ValidateNonSelectQuery(string expected, string query)
         {
+            expected = expected.ToLower();
+            query = query.ToLower();
             List<string> queryItems = query.Replace("\n", " ").Replace('(', ' ').Replace(')', ' ').Replace(",", " ").Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
             List<string> expectedItems = expected.Replace("\n", " ").Replace('(', ' ').Replace(')', ' ').Replace(",", " ").Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
@@ -41,6 +43,8 @@ namespace LearnSQL.Controllers
         }
         public static bool ValidateSelectQuery(string expected, string query)
         {
+            expected = expected.ToLower();
+            query = query.ToLower();
             try
             {
                 connection = new SqlConnection(connectionString);
@@ -55,7 +59,11 @@ namespace LearnSQL.Controllers
                     {
                         while (reader.Read())
                         {
-                            QueryOutput.AddRange(new string[] { reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString() });
+                            for(int i=0;i<reader.FieldCount;i++)
+                            {
+                                QueryOutput.Add(reader[i].ToString());
+                            }
+                            
                         }
                     }
                 }
@@ -71,22 +79,25 @@ namespace LearnSQL.Controllers
                     {
                         while (reader.Read())
                         {
-                            ExpectedOutput.AddRange(new string[] { reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString() });
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                ExpectedOutput.Add(reader[i].ToString());
+                            }
                         }
                     }
                 }
-                if (ExpectedOutput == QueryOutput)
+                for(int i=0;i<ExpectedOutput.Count;i++)
                 {
-                    MessageBox.Show("Вашата заявка бе успешно изпълнена!", "Поздравления!");
-                    return true;
+                    if (ExpectedOutput[i] != QueryOutput[i]) 
+                    { 
+                        MessageBox.Show("Грешка при синтаксиса на заявката! Заявката връща грешен резултат!", "Грешка!" + (ExpectedOutput.Count.ToString() + QueryOutput.Count.ToString()));
+                        return false;
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Грешка при синтаксиса на заявката! Заявката връща грешен резултат!", "Грешка!");
-                    return false;
-                }
+                MessageBox.Show("Вашата заявка бе успешно изпълнена!", "Поздравления!");
+                return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 MessageBox.Show("Грешка при синтаксиса на заявката! Заявката не може да се изпълни!", "Грешка!");
                 return false;
@@ -117,6 +128,7 @@ namespace LearnSQL.Controllers
 
         private static void DeleteDatabase()
 		{
+
             string deleteQuery = "ALTER DATABASE LearnSQLExercises SET SINGLE_USER WITH ROLLBACK IMMEDIATE DROP DATABASE LearnSQLExercises;";
             connection = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Database=master;Integrated Security=True");
 
@@ -131,7 +143,7 @@ namespace LearnSQL.Controllers
                 }
                 catch (Exception e)
                 {
-                    throw new Exception(e.Message);
+                    
                 }
             }
         }
@@ -152,6 +164,7 @@ namespace LearnSQL.Controllers
                     path.RemoveRange(path.Count - 2, 2);
                     path.AddRange(new List<string>() { "Database", "FillMountainsAndCountriesDb.sql" });
                     string query = File.ReadAllText(string.Join("\\", path));
+                    query = query.ToLower();
 
                     connection = new SqlConnection(connectionString);
 
@@ -169,7 +182,7 @@ namespace LearnSQL.Controllers
 
                     using (connection)
                     {
-                        SqlCommand command = new SqlCommand(exercise.Solution, connection);
+                        SqlCommand command = new SqlCommand((exercise.Solution).ToLower(), connection);
 
                         connection.Open();
                         int result = command.ExecuteNonQuery();
