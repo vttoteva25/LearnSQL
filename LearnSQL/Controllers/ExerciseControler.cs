@@ -90,7 +90,7 @@ namespace LearnSQL.Controllers
                 {
                     if (ExpectedOutput[i] != QueryOutput[i]) 
                     { 
-                        MessageBox.Show("Грешка при синтаксиса на заявката! Заявката връща грешен резултат!", "Грешка!" + (ExpectedOutput.Count.ToString() + QueryOutput.Count.ToString()));
+                        MessageBox.Show("Грешка при синтаксиса на заявката! Заявката връща грешен резултат!", "Грешка!");
                         return false;
                     }
                 }
