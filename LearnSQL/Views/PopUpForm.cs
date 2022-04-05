@@ -44,6 +44,7 @@ namespace LearnSQL
 						Course.buttonIndex++;
 						this.Close();
 					}
+					solutionBox.Clear();
 				}
 			}
 			else
@@ -72,6 +73,7 @@ namespace LearnSQL
 							this.Close();
 						}
 					}
+					solutionBox.Clear();
 				}
 			}
 			
