@@ -22,27 +22,27 @@ VALUES
 ),
 (
 	5,
-	N'Добавете чужд ключ на таблицата Държави, който реферира таблицата Континенти',
+	N'Добавете чужд ключ (ContinentID) на таблицата Държави, който реферира таблицата Континенти',
 	N'ALTER TABLE Countries ADD ContinentID CHAR(2) NOT NULL FOREIGN KEY REFERENCES  Continents (ID) '
 ),
 (
 	6,
-	N'Добавете чужд ключ на таблицата Върхове, който реферира таблицата Планини',
+	N'Добавете чужд ключ (MountainID) на таблицата Върхове, който реферира таблицата Планини',
 	N'ALTER TABLE Peaks ADD MountainID INT NOT NULL FOREIGN KEY REFERENCES Mountains(ID) '
 ),
 (
 	7,
-	N'Създайте таблица CountriesMountains, която осъществява връзката много към много между таблиците Държави и Планини',
+	N'Създайте таблица CountriesMountains, с полета CountryID И MountainID, която осъществява връзка много към много между таблиците Държави и Планини',
 	N'CREATE TABLE CountriesMountains(CountryID CHAR(2) NOT NULL FOREIGN KEY REFERENCES Countries (ID), MountainID INT NOT NULL FOREIGN KEY REFERENCES Mountains (ID))'
 ),
 (
 	8,
-	N'Напълнете таблицата континенти със следните имена на континенти: Africa, Antarctica, Asia, Europe, North America, Oceania, South America',
+	N'Напълнете таблицата континенти със следните имена на континенти: Africa, Antarctica, Asia, Europe, North America, Oceania, South America и съотвените им кодове: AF, AN, AS, EU, NA, OC, SA', 
 	N'INSERT Continentes VALUES (^AF^, ^Africa^), (^AN^, ^Antarctica^), (^AS^, ^Asia^), (^EU^, ^Europe^), (^NA^, ^North America^), (^OC^, ^Oceania^), (^SA^, ^South America^);'
 ),
 (
 	9,
-	N'Изведете пълна информация за всички върхове (ID, Name, Height)',
+	N'Изведете пълна информация за всички върхове (Използвайте *)',
 	N'SELECT * FROM Peaks '
 ),
 (
@@ -52,17 +52,17 @@ VALUES
 ),
 (
 	11,
-	N'Изведете кода и имената на всички държави с подходящи имена на кирилица',
+	N'Изведете кода и имената на всички държави с подходящи имена на кирилица (Код на държавата, Име на държавата)',
 	N'SELECT ID AS ^Код на държавата^, Name AS ^Име на държавата^ FROM Countries '
 ),
 (
 	12,
-	N'Името на най-високия връх ',
+	N'Изведете информацията за най-високия връх ',
 	N'SELECT TOP 1 * FROM Peaks ORDER BY Height DESC '
 ),
 (
 	13,
-	N'Броя на върховете по-високи от 8000 метра',
+	N'Изведете броя на върховете по-високи от 8000 метра',
 	N'SELECT COUNT(Height) FROM Peaks WHERE Height > 8000 '
 ),
 (
@@ -82,6 +82,6 @@ VALUES
 ),
 (
 	17,
-	N'Всички върхове в България',
+	N'Изведете всички върхове в България',
 	N'SELECT Peaks.Name, Countries.Name FROM Peaks INNER JOIN Mountains ON  Peaks.MountainID = Mountains.ID INNER JOIN CountriesMountains ON  CountriesMountains.MountainID = Mountains.ID INNER JOIN Countries ON Countries.ID = CountriesMountains.CountryId WHERE Countries.Name = ^Bulgaria^'
 )
