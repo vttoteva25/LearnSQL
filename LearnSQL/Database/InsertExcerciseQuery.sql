@@ -2,22 +2,22 @@
 VALUES
 (
 	1,
-	N'Създайте таблица Континенти (Continents): код (ID)– точно 2 символа, име на континента(Name) – уникално, до 50 символа ',
+	N'Създайте таблица Континенти (Continents): код (ID)– първичен ключ - точно 2 символа, име на континента(Name) – уникално, до 50 символа ',
 	N'CREATE TABLE Continents(ID CHAR(2) PRIMARY KEY, Name NVARCHAR(50) UNIQUE  NOT NULL)'
 ),
 (
 	2,
-	N'Създайте таблица Държави (Countries): код(ID) – точно 2 символа, име на държавата (Name) до 50 символа, уникално, име на столицата ѝ (Capital) ',
+	N'Създайте таблица Държави (Countries): код(ID) – първичен ключ - точно 2 символа, име на държавата (Name) до 50 символа, уникално, име на столицата ѝ (Capital) ',
 	N'CREATE TABLE Countries(ID CHAR(2) PRIMARY KEY, Name NVARCHAR(50) UNIQUE  NOT NULL, Capital NVARCHAR(50) NOT NULL)'
 ),
 (
 	3,
-	N'Създайте таблица Планини (Mountains): номер (ID) – цяло число, име на планината (Name) – до 60 символа ',
+	N'Създайте таблица Планини (Mountains): номер (ID) – първичен ключ - цяло число, име на планината (Name) – до 60 символа ',
 	N'CREATE TABLE Mountains(ID INT PRIMARY KEY, Name NVARCHAR(60) NOT NULL)'
 ),
 (
 	4,
-	N'Създайте таблица Върхове (Peaks): номер (ID) – цяло число, име на върха(Name)– до 50 символа, височона на върха (Height) –цяло число ',
+	N'Създайте таблица Върхове (Peaks): номер (ID) – първичен ключ - цяло число, име на върха(Name)– до 50 символа, височона на върха (Height) –цяло число ',
 	N'CREATE TABLE Peaks(ID INT PRIMARY KEY, Name NVARCHAR(50) UNIQUE NOT NULL, Height INT NOT NULL ) '
 ),
 (
